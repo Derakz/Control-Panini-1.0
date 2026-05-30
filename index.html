@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panini Control</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Panini Control</h1>
+  <p>Checklist álbum FIFA</p>
+</header>
+
+<section class="stats">
+  <div>
+    <span id="totalTengo">0</span>
+    <small>Tengo</small>
+  </div>
+  <div>
+    <span id="totalFaltan">0</span>
+    <small>Faltan</small>
+  </div>
+  <div>
+    <span id="totalRepetidas">0</span>
+    <small>Repetidas</small>
+  </div>
+  <div>
+    <span id="porcentaje">0%</span>
+    <small>Avance</small>
+  </div>
+</section>
+
+<div class="progress">
+  <div id="progressBar"></div>
+</div>
+
+<section class="controls">
+  <input id="buscador" type="text" placeholder="Buscar: GHA, ARG, GHA15..." />
+
+  <select id="filtro">
+    <option value="todos">Todas</option>
+    <option value="tengo">Tengo</option>
+    <option value="faltan">Faltan</option>
+    <option value="repetidas">Repetidas</option>
+  </select>
+</section>
+
+<section id="album"></section>
+
+<footer>
+  <button onclick="copiarFaltantes()">Copiar faltantes</button>
+  <button onclick="copiarRepetidas()">Copiar repetidas</button>
+  <button class="danger" onclick="reiniciar()">Reiniciar</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
